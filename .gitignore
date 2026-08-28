@@ -1,0 +1,20 @@
+node_modules/
+dist/   
+build/
+
+# Python 
+venv/ 
+.venv/ 
+__pycache__/ 
+*.pyc 
+
+
+# Environment/secrets 
+.env 
+
+# Project-specific: scraper output dumps 
+*_raw.json 
+
+# OS clutter 
+.DS_Store 
+Thumbs.db 
