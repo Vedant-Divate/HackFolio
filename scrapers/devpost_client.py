@@ -11,20 +11,69 @@ from datetime import datetime, timezone
 import re
 
 def fetch_devpost_hackathons():
-    url = "https://devpost.com/api/hackathons"
+    """
+    Fetch currently open/upcoming Devpost hackathons with pagination support.
+    
+    Uses status=open filter to only return active hackathons (not historical archive).
+    Pagination terminates naturally based on API's total_count or empty response.
+    """
+    base_url = "https://devpost.com/api/hackathons"
     # Bypass SSL verification for local dev environments that might have issues
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
     
-    req = urllib.request.Request(url)
-    try:
-        response = urllib.request.urlopen(req, context=ctx)
-        data = json.loads(response.read())
-        return data.get('hackathons', [])
-    except Exception as e:
-        print(f"Error fetching from Devpost: {e}")
-        return []
+    all_hackathons = []
+    page = 1
+    seen_titles = set()
+    
+    while True:
+        # Use status=open filter to get only currently active hackathons
+        url = f"{base_url}?status=open&page={page}"
+        req = urllib.request.Request(url)
+        
+        try:
+            response = urllib.request.urlopen(req, context=ctx)
+            data = json.loads(response.read())
+            
+            hackathons = data.get('hackathons', [])
+            if not hackathons:
+                print(f"  Page {page} returned empty results, stopping")
+                break
+            
+            # Check for duplicate content (API sometimes returns same page)
+            page_titles = [h.get('title', '') for h in hackathons]
+            if all(t in seen_titles for t in page_titles):
+                print(f"  Page {page} contains only duplicate titles, stopping")
+                break
+            
+            # Add new titles to seen set
+            for t in page_titles:
+                seen_titles.add(t)
+                
+            all_hackathons.extend(hackathons)
+            print(f"  Fetched page {page}: {len(hackathons)} hackathons (total: {len(all_hackathons)})")
+            
+            # Check if we've fetched all available pages per API meta
+            meta = data.get('meta', {})
+            total_count = meta.get('total_count', 0)
+            per_page = meta.get('per_page', 9)
+            
+            if total_count and len(all_hackathons) >= total_count:
+                print(f"  Reached API reported total_count ({total_count})")
+                break
+                
+            page += 1
+            
+            # Small delay to be respectful to the API
+            import time
+            time.sleep(0.1)
+            
+        except Exception as e:
+            print(f"Error fetching page {page} from Devpost: {e}")
+            break
+    
+    return all_hackathons
 
 def map_domain(theme_name):
     # Mapping Devpost themes to unified domains: ai_ml, blockchain, full_stack, security, web3, cloud
@@ -106,7 +155,11 @@ def normalize_devpost(raw_hackathons):
         
         start_date, end_date = parse_devpost_dates(h.get('submission_period_dates', ''))
         
-        org_name = h.get('organization_name', '').strip()
+        org_name = h.get('organization_name')
+        if org_name:
+            org_name = org_name.strip()
+        else:
+            org_name = ''
         organizer = org_name if org_name else 'Devpost (Unknown)'
         sponsors = [org_name] if org_name else []
         
