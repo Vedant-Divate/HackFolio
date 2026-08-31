@@ -19,7 +19,12 @@ import re
 import uuid
 from datetime import datetime, timezone
 
-SEASON_URL = "https://mlh.io/seasons/2026/events"
+# TODO: This URL is year-hardcoded and will need manual updates each season.
+# MLH's site structure doesn't appear to have a stable "current season" link on their homepage.
+# The /seasons/ page returns 404, and /events only links to specific season URLs.
+# Consider implementing dynamic season detection in the future (e.g., by checking which
+# season has upcomingEvents > 0, or by parsing the current year and trying current/next year).
+SEASON_URL = "https://mlh.io/seasons/2027/events"
 
 
 def _ssl_ctx():
@@ -30,7 +35,11 @@ def _ssl_ctx():
 
 
 def fetch_mlh_events():
-    """Fetch and return raw MLH event dicts from the Inertia.js page payload."""
+    """Fetch and return raw MLH event dicts from the Inertia.js page payload.
+    
+    Only returns upcomingEvents (currently active/upcoming hackathons).
+    Excludes pastEvents (ended hackathons) to match Devpost's status=open filter behavior.
+    """
     try:
         req = urllib.request.Request(
             SEASON_URL,
@@ -48,8 +57,8 @@ def fetch_mlh_events():
         data = json.loads(match.group(1))
         props = data.get("props", {})
         upcoming = props.get("upcomingEvents", [])
-        past = props.get("pastEvents", [])
-        return upcoming + past
+        # Only return upcoming events - exclude past/ended events
+        return upcoming
     except Exception as e:
         print(f"Error fetching from MLH: {e}")
         return []

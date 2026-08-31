@@ -2,9 +2,9 @@ node_modules/
 dist/   
 build/
 
-# Python 
+# Python
 venv/ 
-.venv/ 
+venv314/ 
 __pycache__/ 
 *.pyc 
 

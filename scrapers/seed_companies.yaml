@@ -1,0 +1,796 @@
+# Hackfolio Manual Seed Company List
+# Curated list of high-value company-run hackathons and programs
+# Each entry follows the unified schema (section 7) with added category_tags field
+# source_platform: "manual" for all entries
+# 
+# Tags vocabulary: placement_pipeline, prestige, web3, social_impact, women_focused, research_linked, fintech
+# 
+# NOTE: Major League Hacking (MLH) is tracked as an ongoing program, not a single dated event.
+# It needs different ingestion handling than one-off entries.
+
+- id: "manual-cisco-sparkathon"
+  title: "Cisco Sparkathon / Global Problem Solver Challenge"
+  organizer: "Cisco"
+  source_platform: "manual"
+  source_url: "https://www.cisco.com/c/m/en_us/about/cisco-purpose/global-problem-solver-challenge.html"
+  description: "Cisco's flagship global hackathon for social impact and technology innovation. Formerly known as Global Problem Solver Challenge. Significant prize pools, mentorship from Cisco executives, and strong resume signal for networking/security/cloud roles."
+  domains: ["security", "cloud", "ai_ml", "full_stack"]
+  mode: "hybrid"
+  location: "Global (regional finals)"
+  prize_pool:
+    amount: 1000000
+    currency: "USD"
+    display_text: "$1,000,000+ total prizes"
+  sponsors: ["Cisco"]
+  registration_deadline: "2026-01-15T23:59:00Z"
+  event_start_date: "2026-02-01T00:00:00Z"
+  event_end_date: "2026-06-30T23:59:00Z"
+  participant_count: 5000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["social_impact", "networking", "security", "cloud", "ai"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-walmart-sparkathon"
+  title: "Walmart Sparkathon"
+  organizer: "Walmart Global Tech"
+  source_platform: "manual"
+  source_url: "https://www.walmartglobaltech.com/careers/sparkathon"
+  description: "Walmart's flagship hiring-linked hackathon for students and early-career professionals. High CTC/stipend hiring pipeline with direct interview opportunities. Focus on retail tech, supply chain, e-commerce, and data at scale."
+  domains: ["full_stack", "ai_ml", "cloud", "security"]
+  mode: "hybrid"
+  location: "India (Bangalore/Chennai/Gurgaon) + Virtual"
+  prize_pool:
+    amount: 5000000
+    currency: "INR"
+    display_text: "₹50L+ prizes + PPO/stipend offers"
+  sponsors: ["Walmart", "PhonePe", "Flipkart"]
+  registration_deadline: "2026-02-28T23:59:00Z"
+  event_start_date: "2026-03-15T00:00:00Z"
+  event_end_date: "2026-04-15T23:59:00Z"
+  participant_count: 15000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["hiring", "retail_tech", "ecommerce", "supply_chain", "data_at_scale"]
+  category_tags: ["placement_pipeline", "prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-walmart-codehers"
+  title: "Walmart CodeHers"
+  organizer: "Walmart Global Tech"
+  source_platform: "manual"
+  source_url: "https://www.walmartglobaltech.com/careers/codehers"
+  description: "Women-focused track of Walmart's hiring hackathon. Separate from Sparkathon, designed to increase women representation in tech. Direct hiring pipeline with mentorship from women leaders at Walmart."
+  domains: ["full_stack", "ai_ml", "cloud", "security"]
+  mode: "hybrid"
+  location: "India (Bangalore/Chennai/Gurgaon) + Virtual"
+  prize_pool:
+    amount: 3000000
+    currency: "INR"
+    display_text: "₹30L+ prizes + PPO/stipend offers"
+  sponsors: ["Walmart", "PhonePe"]
+  registration_deadline: "2026-03-15T23:59:00Z"
+  event_start_date: "2026-04-01T00:00:00Z"
+  event_end_date: "2026-05-15T23:59:00Z"
+  participant_count: 8000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["women_in_tech", "hiring", "retail_tech", "mentorship"]
+  category_tags: ["placement_pipeline", "women_focused"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-flipkart-grid"
+  title: "Flipkart GRiD"
+  organizer: "Flipkart"
+  source_platform: "manual"
+  source_url: "https://grid.flipkart.com/"
+  description: "Flipkart's premier hiring hackathon. Stipends up to ₹1L/month, CTC up to ₹32.67L reported for recent editions. Focus on e-commerce, supply chain, fintech, and ML at scale. One of India's most prestigious student hackathons."
+  domains: ["full_stack", "ai_ml", "fintech", "cloud"]
+  mode: "hybrid"
+  location: "India (Bangalore) + Virtual"
+  prize_pool:
+    amount: 10000000
+    currency: "INR"
+    display_text: "₹1Cr+ prizes + stipends up to ₹1L/month + PPOs"
+  sponsors: ["Flipkart", "PhonePe"]
+  registration_deadline: "2026-01-31T23:59:00Z"
+  event_start_date: "2026-02-15T00:00:00Z"
+  event_end_date: "2026-04-30T23:59:00Z"
+  participant_count: 20000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["hiring", "ecommerce", "fintech", "supply_chain", "ml_at_scale"]
+  category_tags: ["placement_pipeline", "prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-amazon-hackon"
+  title: "Amazon HackOn"
+  organizer: "Amazon"
+  source_platform: "manual"
+  source_url: "https://www.amazonhackon.com/"
+  description: "Amazon's direct hiring-linked hackathon for students, distinct from AWS's Devpost-hosted challenges. Focus on distributed systems, cloud, and customer-obsessed problem solving. Direct pipeline to Amazon SDE roles."
+  domains: ["full_stack", "cloud", "security", "ai_ml"]
+  mode: "online"
+  location: "Virtual"
+  prize_pool:
+    amount: 2000000
+    currency: "INR"
+    display_text: "₹20L+ prizes + interview opportunities"
+  sponsors: ["Amazon"]
+  registration_deadline: "2026-03-31T23:59:00Z"
+  event_start_date: "2026-04-15T00:00:00Z"
+  event_end_date: "2026-06-15T23:59:00Z"
+  participant_count: 10000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["hiring", "distributed_systems", "cloud", "aws", "customer_obsession"]
+  category_tags: ["placement_pipeline"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-aws-hackathons"
+  title: "AWS Hackathons (Devpost-hosted)"
+  organizer: "Amazon Web Services"
+  source_platform: "manual"
+  source_url: "https://devpost.com/software/search?query=aws"
+  description: "AWS-hosted hackathons on Devpost covering cloud, AI/ML, serverless, and startup challenges. Regular cadence throughout the year. Strong prestige signal for cloud/AI roles."
+  domains: ["cloud", "ai_ml", "serverless", "full_stack", "security"]
+  mode: "online"
+  location: "Virtual"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ per event (varies)"
+  sponsors: ["AWS", "Amazon"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 5000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["cloud", "aws", "serverless", "startup", "ai_ml"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-adobe-india-hackathon"
+  title: "Adobe India Hackathon"
+  organizer: "Adobe"
+  source_platform: "manual"
+  source_url: "https://adobeindiahackathon.com/"
+  description: "Adobe's flagship India hackathon for creative technology, AI/ML, and digital experience innovation. Strong prestige signal for product/engineering roles at Adobe."
+  domains: ["ai_ml", "full_stack", "cloud", "security"]
+  mode: "hybrid"
+  location: "India (Bangalore/Noida) + Virtual"
+  prize_pool:
+    amount: 5000000
+    currency: "INR"
+    display_text: "₹50L+ prizes + Adobe internship/PPO opportunities"
+  sponsors: ["Adobe"]
+  registration_deadline: "2026-02-28T23:59:00Z"
+  event_start_date: "2026-03-15T00:00:00Z"
+  event_end_date: "2026-05-31T23:59:00Z"
+  participant_count: 8000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["creative_tech", "ai_ml", "digital_experience", "hiring"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-goldman-sachs-hackathons"
+  title: "Goldman Sachs Technical Hackathons"
+  organizer: "Goldman Sachs"
+  source_platform: "manual"
+  source_url: "https://www.goldmansachs.com/careers/students/programs/engineering/hackathon.html"
+  description: "Goldman Sachs' technical hackathons for engineering talent. High CTC signal even for non-finance roles. Focus on fintech, trading tech, risk systems, and data engineering."
+  domains: ["fintech", "full_stack", "ai_ml", "security", "cloud"]
+  mode: "hybrid"
+  location: "India (Bangalore/Gurgaon) + Global virtual"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ prizes + full-time/analyst offers"
+  sponsors: ["Goldman Sachs"]
+  registration_deadline: "2026-03-31T23:59:00Z"
+  event_start_date: "2026-04-15T00:00:00Z"
+  event_end_date: "2026-06-30T23:59:00Z"
+  participant_count: 3000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["fintech", "trading_tech", "risk_systems", "data_engineering", "hiring"]
+  category_tags: ["placement_pipeline", "fintech"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-google-solution-challenge"
+  title: "Google Solution Challenge"
+  organizer: "Google Developer Student Clubs"
+  source_platform: "manual"
+  source_url: "https://developers.google.com/community/dsc-solution-challenge"
+  description: "Google's global student competition to build solutions for UN Sustainable Development Goals using Google technologies. Strong prestige, social impact focus, and direct mentorship from Google engineers."
+  domains: ["ai_ml", "cloud", "full_stack", "web3", "security"]
+  mode: "online"
+  location: "Global (virtual)"
+  prize_pool:
+    amount: 50000
+    currency: "USD"
+    display_text: "$50K+ prizes + Google mentorship + UN showcase"
+  sponsors: ["Google", "Google Cloud", "Firebase", "TensorFlow"]
+  registration_deadline: "2026-03-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-06-30T23:59:00Z"
+  participant_count: 50000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["social_impact", "sdg", "google_tech", "student", "global"]
+  category_tags: ["prestige", "social_impact"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-google-cloud-hackathons"
+  title: "Google Cloud Hackathons"
+  organizer: "Google Cloud"
+  source_platform: "manual"
+  source_url: "https://cloud.google.com/community/hackathons"
+  description: "Regular Google Cloud hackathons focused on cloud-native development, AI/ML on Vertex AI, data analytics, and serverless. Hosted on Devpost and other platforms."
+  domains: ["cloud", "ai_ml", "full_stack", "security"]
+  mode: "online"
+  location: "Virtual"
+  prize_pool:
+    amount: 75000
+    currency: "USD"
+    display_text: "$75K+ per event (varies)"
+  sponsors: ["Google Cloud", "Google"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 3000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["gcp", "vertex_ai", "serverless", "data_analytics", "cloud_native"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-microsoft-imagine-cup"
+  title: "Microsoft Imagine Cup"
+  organizer: "Microsoft"
+  source_platform: "manual"
+  source_url: "https://imaginecup.microsoft.com/"
+  description: "One of the most valuable global student competitions. Strong startup/mentorship angle with Azure credits, mentorship from Microsoft executives, and global finals. Alumni include successful startup founders."
+  domains: ["ai_ml", "cloud", "full_stack", "web3", "security", "blockchain"]
+  mode: "hybrid"
+  location: "Global (regional + world finals)"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ grand prize + Azure credits + mentorship"
+  sponsors: ["Microsoft", "Azure", "GitHub", "LinkedIn"]
+  registration_deadline: "2026-01-31T23:59:00Z"
+  event_start_date: "2026-02-01T00:00:00Z"
+  event_end_date: "2026-07-31T23:59:00Z"
+  participant_count: 100000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["startup", "azure", "global", "student", "mentorship"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-mastercard-gff"
+  title: "Mastercard GFF AI Defense Lab / FraudGuard 360"
+  organizer: "Mastercard"
+  source_platform: "manual"
+  source_url: "https://www.mastercard.com/gff/"
+  description: "Mastercard's Global FinTech Festival hackathons including AI Defense Lab and FraudGuard 360. Focus on fintech security, AI for fraud detection, and payment innovation. High prestige in fintech/security."
+  domains: ["fintech", "ai_ml", "security", "blockchain", "full_stack"]
+  mode: "hybrid"
+  location: "India (Mumbai/Bangalore) + Global virtual"
+  prize_pool:
+    amount: 200000
+    currency: "USD"
+    display_text: "$200K+ prizes + Mastercard partnership opportunities"
+  sponsors: ["Mastercard"]
+  registration_deadline: "2026-04-30T23:59:00Z"
+  event_start_date: "2026-05-15T00:00:00Z"
+  event_end_date: "2026-08-31T23:59:00Z"
+  participant_count: 5000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["fintech", "fraud_detection", "ai_security", "payments", "partnership"]
+  category_tags: ["prestige", "fintech"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-cognizant-student-hackathon"
+  title: "Cognizant Student Hackathon"
+  organizer: "Cognizant"
+  source_platform: "manual"
+  source_url: "https://www.cognizant.com/student-hackathon"
+  description: "Cognizant's pre-placement track hackathon for students. High placement conversion for IT services roles. Focus on digital transformation, cloud, and enterprise solutions."
+  domains: ["full_stack", "cloud", "ai_ml", "security"]
+  mode: "hybrid"
+  location: "India (multiple cities) + Virtual"
+  prize_pool:
+    amount: 1000000
+    currency: "INR"
+    display_text: "₹10L+ prizes + placement offers"
+  sponsors: ["Cognizant"]
+  registration_deadline: "2026-02-28T23:59:00Z"
+  event_start_date: "2026-03-15T00:00:00Z"
+  event_end_date: "2026-05-31T23:59:00Z"
+  participant_count: 15000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["hiring", "digital_transformation", "enterprise", "placement"]
+  category_tags: ["placement_pipeline"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-infosys-tcs-wipro-bajaj-tata"
+  title: "Infosys/TCS/Wipro/Bajaj Finserv/Tata Hiring-Linked Hackathons"
+  organizer: "Infosys, TCS, Wipro, Bajaj Finserv, Tata Group"
+  source_platform: "manual"
+  source_url: "https://www.infosys.com/careers/hackathon.html"
+  description: "Various hiring-linked hackathons and coding challenges from major Indian IT services and conglomerates. Lower prestige than product companies but very high placement conversion. Track separately from prestige-tagged events."
+  domains: ["full_stack", "cloud", "ai_ml", "security", "fintech"]
+  mode: "hybrid"
+  location: "India (multiple cities) + Virtual"
+  prize_pool:
+    amount: 500000
+    currency: "INR"
+    display_text: "₹5L+ prizes per event + placement/stipend offers"
+  sponsors: ["Infosys", "TCS", "Wipro", "Bajaj Finserv", "Tata"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 50000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["hiring", "it_services", "placement", "mass_recruitment", "enterprise"]
+  category_tags: ["placement_pipeline"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-samsung-prism-ennovatex"
+  title: "Samsung PRISM / EnnovateX"
+  organizer: "Samsung Research India"
+  source_platform: "manual"
+  source_url: "https://research.samsung.com/prism"
+  description: "Samsung's R&D-driven programs: PRISM (Preparing and Inspiring Student Minds) and EnnovateX. Strong fit for ML/embedded/systems research. Direct engagement with Samsung researchers, publication opportunities."
+  domains: ["ai_ml", "security", "cloud", "full_stack"]
+  mode: "hybrid"
+  location: "India (Bangalore/Delhi) + Virtual"
+  prize_pool:
+    amount: 2000000
+    currency: "INR"
+    display_text: "₹20L+ stipends + research publication + Samsung R&D opportunities"
+  sponsors: ["Samsung", "Samsung Research"]
+  registration_deadline: "2026-03-31T23:59:00Z"
+  event_start_date: "2026-04-15T00:00:00Z"
+  event_end_date: "2026-10-31T23:59:00Z"
+  participant_count: 2000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["research", "r&d", "embedded", "ml", "publication", "samsung_research"]
+  category_tags: ["research_linked"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-sih"
+  title: "Smart India Hackathon (SIH)"
+  organizer: "Government of India (AICTE, Ministry of Education)"
+  source_platform: "manual"
+  source_url: "https://www.sih.gov.in/"
+  description: "Government-run, extremely high resume value in India. World's largest open innovation model. Problem statements from ministries, PSUs, and industry. Massive scale, strong social impact and prestige signals."
+  domains: ["ai_ml", "full_stack", "security", "cloud", "blockchain", "web3", "fintech"]
+  mode: "hybrid"
+  location: "India (nationwide physical + virtual)"
+  prize_pool:
+    amount: 10000000
+    currency: "INR"
+    display_text: "₹1Cr+ total prizes + government recognition + startup incubation"
+  sponsors: ["Government of India", "AICTE", "Ministry of Education", "Various Ministries", "PSUs"]
+  registration_deadline: "2026-01-31T23:59:00Z"
+  event_start_date: "2026-03-01T00:00:00Z"
+  event_end_date: "2026-08-31T23:59:00Z"
+  participant_count: 100000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["government", "social_impact", "national_scale", "open_innovation", "student"]
+  category_tags: ["prestige", "social_impact"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+# ============================================================
+# GLOBAL CORPORATE / FOUNDATION HACKATHONS
+# ============================================================
+
+- id: "manual-nasa-space-apps"
+  title: "NASA Space Apps Challenge"
+  organizer: "NASA"
+  source_platform: "manual"
+  source_url: "https://www.spaceappschallenge.org/"
+  description: "Major global hackathon using NASA's free datasets and APIs. Strong international resume weight. Focus on space, earth science, and social impact challenges. Local events in 150+ countries."
+  domains: ["ai_ml", "full_stack", "cloud", "security", "web3"]
+  mode: "hybrid"
+  location: "Global (150+ local events + virtual)"
+  prize_pool:
+    amount: 0
+    currency: "USD"
+    display_text: "Global recognition + NASA mentorship + space industry access (non-monetary)"
+  sponsors: ["NASA", "ESA", "JAXA", "CSA", "CNES", "ASI", "Boeing", "Lockheed Martin"]
+  registration_deadline: "2026-09-30T23:59:00Z"
+  event_start_date: "2026-10-04T00:00:00Z"
+  event_end_date: "2026-10-05T23:59:00Z"
+  participant_count: 50000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["space", "earth_science", "nasa_data", "global", "social_impact", "student"]
+  category_tags: ["prestige", "social_impact"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-ethglobal"
+  title: "ETHGlobal Hackathon Series"
+  organizer: "Ethereum Foundation / ETHGlobal"
+  source_platform: "manual"
+  source_url: "https://ethglobal.com/events"
+  description: "Leading global blockchain/web3 hackathon series. Direct match for Solidity/web3 work. Multiple events per year (Bangkok, Singapore, NYC, Paris, etc.). Strong web3 prestige, investor/VC exposure, grant opportunities."
+  domains: ["blockchain", "web3", "security", "full_stack"]
+  mode: "hybrid"
+  location: "Global (multiple cities per year)"
+  prize_pool:
+    amount: 500000
+    currency: "USD"
+    display_text: "$500K+ per event in prizes + grants + investment opportunities"
+  sponsors: ["Ethereum Foundation", "ETHGlobal", "Polygon", "Arbitrum", "Optimism", "Base", "Uniswap", "Aave", "Chainlink"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 3000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["web3", "ethereum", "solidity", "defi", "grants", "vc_exposure", "global"]
+  category_tags: ["web3", "prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-ibm-call-for-code"
+  title: "IBM Call for Code"
+  organizer: "IBM"
+  source_platform: "manual"
+  source_url: "https://callforcode.org/"
+  description: "Global social-impact challenge with strong enterprise credibility. Focus on climate change, disaster response, and humanitarian aid using IBM Cloud and AI. Strong prestige for enterprise/impact roles."
+  domains: ["ai_ml", "cloud", "full_stack", "security", "web3"]
+  mode: "online"
+  location: "Global (virtual)"
+  prize_pool:
+    amount: 200000
+    currency: "USD"
+    display_text: "$200K+ grand prize + IBM Cloud credits + deployment support"
+  sponsors: ["IBM", "Red Hat", "Linux Foundation", "UN Human Rights"]
+  registration_deadline: "2026-07-31T23:59:00Z"
+  event_start_date: "2026-03-01T00:00:00Z"
+  event_end_date: "2026-10-31T23:59:00Z"
+  participant_count: 20000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["social_impact", "climate", "disaster_response", "ibm_cloud", "enterprise", "humanitarian"]
+  category_tags: ["social_impact", "prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-meta-hacker-cup"
+  title: "Meta Hacker Cup / Dev Challenges"
+  organizer: "Meta"
+  source_platform: "manual"
+  source_url: "https://www.facebook.com/codingcompetitions/hacker-cup"
+  description: "Meta's algorithmic programming competition (Hacker Cup) and occasional dev challenges. Occasional but high prestige for algorithmic/engineering roles at Meta."
+  domains: ["security", "ai_ml", "full_stack", "blockchain"]
+  mode: "online"
+  location: "Global (virtual)"
+  prize_pool:
+    amount: 50000
+    currency: "USD"
+    display_text: "$50K+ prizes + Meta interview fast-track"
+  sponsors: ["Meta", "Facebook"]
+  registration_deadline: "2026-06-30T23:59:00Z"
+  event_start_date: "2026-07-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 20000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["algorithmic", "competitive_programming", "meta", "interview_fast_track"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-jpmorgan-code-for-good"
+  title: "JPMorgan Chase Code for Good"
+  organizer: "JPMorgan Chase"
+  source_platform: "manual"
+  source_url: "https://www.jpmorganchase.com/careers/students/code-for-good"
+  description: "High prestige hackathon combining finance + social impact. Teams build solutions for non-profits. Strong placement pipeline for JPMorgan tech roles. Finance + social impact combo."
+  domains: ["fintech", "full_stack", "ai_ml", "cloud", "security"]
+  mode: "hybrid"
+  location: "Global (multiple cities + virtual)"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ prizes + JPMorgan analyst/associate offers + non-profit impact"
+  sponsors: ["JPMorgan Chase"]
+  registration_deadline: "2026-04-30T23:59:00Z"
+  event_start_date: "2026-06-01T00:00:00Z"
+  event_end_date: "2026-09-30T23:59:00Z"
+  participant_count: 10000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["fintech", "social_impact", "non_profit", "hiring", "finance_tech"]
+  category_tags: ["social_impact", "fintech", "placement_pipeline"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-salesforce-trailblazerdx"
+  title: "Salesforce TrailblazerDX Hackathons"
+  organizer: "Salesforce"
+  source_platform: "manual"
+  source_url: "https://trailblazerdx.com/"
+  description: "Salesforce's developer conference hackathons. Focus on low-code, AI, CRM, and enterprise cloud. Strong prestige for Salesforce ecosystem roles."
+  domains: ["cloud", "ai_ml", "full_stack", "security"]
+  mode: "hybrid"
+  location: "San Francisco + Virtual"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ prizes + Salesforce certifications + ecosystem access"
+  sponsors: ["Salesforce", "MuleSoft", "Tableau", "Slack"]
+  registration_deadline: "2026-02-28T23:59:00Z"
+  event_start_date: "2026-03-01T00:00:00Z"
+  event_end_date: "2026-03-15T23:59:00Z"
+  participant_count: 5000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["salesforce", "low_code", "crm", "enterprise_cloud", "trailhead"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-vmware-qualcomm"
+  title: "VMware/Qualcomm Hardware & Systems Challenges"
+  organizer: "VMware / Qualcomm"
+  source_platform: "manual"
+  source_url: "https://www.vmware.com/company/research.html"
+  description: "Occasional hardware/systems challenges from VMware and Qualcomm. Good fit for embedded/IoT/systems researchers. Kernel, virtualization, 5G, edge computing focus."
+  domains: ["security", "cloud", "ai_ml", "full_stack"]
+  mode: "hybrid"
+  location: "Global (varies by event)"
+  prize_pool:
+    amount: 50000
+    currency: "USD"
+    display_text: "$50K+ prizes + research collaboration opportunities"
+  sponsors: ["VMware", "Qualcomm"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 1000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["embedded", "iot", "kernel", "virtualization", "5g", "edge", "systems"]
+  category_tags: ["research_linked"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+- id: "manual-barclays-deutsche-bank"
+  title: "Barclays / Deutsche Bank Fintech Hackathons"
+  organizer: "Barclays / Deutsche Bank"
+  source_platform: "manual"
+  source_url: "https://www.barclays.com/careers/early-careers/hackathons/"
+  description: "Fintech hackathons from major investment banks. Decent blockchain crossover potential. Focus on payments, trading tech, risk, regulatory tech."
+  domains: ["fintech", "blockchain", "security", "full_stack", "ai_ml", "cloud"]
+  mode: "hybrid"
+  location: "Global (London, NYC, Singapore, Mumbai + virtual)"
+  prize_pool:
+    amount: 100000
+    currency: "USD"
+    display_text: "$100K+ prizes + banking tech roles + blockchain projects"
+  sponsors: ["Barclays", "Deutsche Bank"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 3000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["fintech", "banking_tech", "blockchain", "payments", "regtech", "trading"]
+  category_tags: ["fintech", "placement_pipeline"]
+  is_mlh_sanctioned: false
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"
+
+# ============================================================
+# SPECIAL: MLH GLOBAL SEASON (ONGOING PROGRAM)
+# ============================================================
+# NOTE: This is tracked as an ongoing program, not a single dated event.
+# Needs different ingestion handling than one-off hackathons.
+# The individual MLH events are already scraped via mlh_client.py.
+# This entry represents the MLH brand/program itself for filtering/tagging.
+
+- id: "manual-mlh-global-season"
+  title: "Major League Hacking (MLH) Global Season"
+  organizer: "Major League Hacking"
+  source_platform: "manual"
+  source_url: "https://mlh.io/seasons"
+  description: "MLH's year-round global hackathon season. Not a single event but an ongoing program sanctioning 300+ hackathons/year worldwide. MLH-sanctioned status is itself a strong legitimacy signal. Individual events are scraped via mlh_client.py. This entry enables filtering by 'MLH program' tag."
+  domains: ["ai_ml", "blockchain", "full_stack", "security", "web3", "cloud"]
+  mode: "hybrid"
+  location: "Global (300+ events/year across 15+ countries)"
+  prize_pool:
+    amount: 0
+    currency: "USD"
+    display_text: "Varies per event (MLH provides swag, mentorship, global network)"
+  sponsors: ["MLH", "Major League Hacking", "DigitalOcean", "GitHub", "AWS", "Google Cloud", "Microsoft", "Meta", "Coinbase", "Solana", "Polygon"]
+  registration_deadline: "2026-12-31T23:59:00Z"
+  event_start_date: "2026-01-01T00:00:00Z"
+  event_end_date: "2026-12-31T23:59:00Z"
+  participant_count: 150000
+  impact_score: 0
+  score_breakdown:
+    organizer_tier: 0
+    sponsor_recognition: 0
+    prize_pool: 0
+    participation_scale: 0
+    recency: 0
+  tags: ["mlh", "global_season", "ongoing_program", "sanctioned", "student", "network"]
+  category_tags: ["prestige"]
+  is_mlh_sanctioned: true
+  ingested_at: "2026-08-29T00:00:00Z"
+  last_updated_at: "2026-08-29T00:00:00Z"

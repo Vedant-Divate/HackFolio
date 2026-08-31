@@ -1,0 +1,157 @@
+# Hackfolio Impact Score Configuration
+# Weights redistributed after removing domain_match (was 15%)
+# Original weights: organizer_tier=25%, sponsor_recognition=20%, prize_pool=20%, domain_match=15%, participation_scale=10%, recency=10%
+# Remaining total: 85% -> redistributed proportionally
+
+weights:
+  organizer_tier: 0.2941      # 25/85 ≈ 29.41%
+  sponsor_recognition: 0.2353 # 20/85 ≈ 23.53%
+  prize_pool: 0.2353          # 20/85 ≈ 23.53%
+  participation_scale: 0.1176 # 10/85 ≈ 11.76%
+  recency: 0.1176             # 10/85 ≈ 11.76%
+
+# Prize pool scoring thresholds (in USD equivalent)
+prize_pool:
+  floor_usd: 50000      # Below this = minimal score
+  ceiling_usd: 500000   # Above this = max score
+  # Non-monetary rewards (Kaggle "Knowledge", "Swag") get a small base score
+  non_monetary_base_score: 0.15
+
+# Organizer tier scoring
+organizer_tier:
+  # Known high-tier organizers (MLH-sanctioned, major platforms, FAANG, etc.)
+  high_tier_organizers:
+    - "MLH"
+    - "Major League Hacking"
+    - "Google"
+    - "Microsoft"
+    - "Meta"
+    - "Amazon"
+    - "AWS"
+    - "Apple"
+    - "IBM"
+    - "NASA"
+    - "Ethereum Foundation"
+    - "ETHGlobal"
+    - "Smart India Hackathon"
+    - "SIH"
+    - "Cisco"
+    - "Walmart"
+    - "Flipkart"
+    - "Adobe"
+    - "Goldman Sachs"
+    - "Mastercard"
+    - "JPMorgan Chase"
+    - "Salesforce"
+    - "Samsung"
+    - "Topcoder"
+    - "Kaggle"
+  high_tier_score: 1.0
+  medium_tier_score: 0.5
+  low_tier_score: 0.1
+
+# Sponsor recognition scoring
+sponsor_recognition:
+  recognized_brands:
+    - "Google"
+    - "Microsoft"
+    - "Meta"
+    - "Amazon"
+    - "AWS"
+    - "Apple"
+    - "IBM"
+    - "NVIDIA"
+    - "Intel"
+    - "Cisco"
+    - "Walmart"
+    - "Flipkart"
+    - "Adobe"
+    - "Goldman Sachs"
+    - "JPMorgan Chase"
+    - "Mastercard"
+    - "Visa"
+    - "Salesforce"
+    - "Samsung"
+    - "Qualcomm"
+    - "VMware"
+    - "Barclays"
+    - "Deutsche Bank"
+    - "Morgan Stanley"
+    - "Citadel"
+    - "Jane Street"
+    - "Two Sigma"
+    - "OpenAI"
+    - "Anthropic"
+    - "Hugging Face"
+    - "Databricks"
+    - "Snowflake"
+    - "Stripe"
+    - "Plaid"
+    - "Coinbase"
+    - "Ethereum Foundation"
+    - "ETHGlobal"
+    - "NASA"
+    - "SpaceX"
+    - "Tesla"
+    - "Netflix"
+    - "Uber"
+    - "Airbnb"
+    - "Shopify"
+    - "Atlassian"
+    - "GitHub"
+    - "GitLab"
+    - "Vercel"
+    - "Cloudflare"
+    - "MongoDB"
+    - "Redis"
+    - "Elastic"
+    - "Confluent"
+    - "HashiCorp"
+    - "Snyk"
+    - "CrowdStrike"
+    - "Palo Alto Networks"
+    - "Zscaler"
+    - "Okta"
+    - "Auth0"
+    - "Twilio"
+    - "SendGrid"
+    - "Postman"
+    - "Figma"
+    - "Notion"
+    - "Linear"
+    - "Retool"
+    - "Supabase"
+    - "PlanetScale"
+    - "Neon"
+    - "Turso"
+    - "Upstash"
+    - "Clerk"
+    - "Prisma"
+    - "T3"
+    - "Vercel"
+  max_sponsors_for_full_score: 5
+  per_sponsor_score: 0.2  # Each recognized sponsor adds 0.2, capped at 1.0
+
+# Participation scale normalization (per-source percentiles)
+participation_scale:
+  # Percentile thresholds for scoring (0-1)
+  # These will be computed per-source at runtime
+  low_percentile: 0.25
+  high_percentile: 0.75
+  low_score: 0.2
+  high_score: 1.0
+
+# Recency scoring
+recency:
+  # Days before deadline for max score
+  active_window_days: 30
+  # Days after deadline for min score
+  expired_penalty_days: 7
+  max_score: 1.0
+  min_score: 0.1
+
+# Score tier thresholds
+score_tiers:
+  top_tier: 75
+  solid: 50
+  low_priority: 0
