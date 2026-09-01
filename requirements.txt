@@ -6,10 +6,13 @@ charset-normalizer==3.5.1
 click==8.5.0
 dnspython==2.8.0
 fastapi==0.115.0
+greenlet==3.5.5
 h11==0.16.0
 idna==3.19
+playwright==1.62.0
 pydantic==2.12.0
 pydantic_core==2.41.1
+pyee==13.0.1
 pymongo==4.8.0
 PyYAML==6.0.3
 RapidFuzz==3.14.5

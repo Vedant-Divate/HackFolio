@@ -11,13 +11,9 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from backend.db import get_hackathons_db
+from backend.db import create_alert, delete_alert as delete_alert_record, get_alerts, get_hackathons_db
 
 router = APIRouter()
-
-# In-memory alert subscriptions store (will be replaced with MongoDB in Phase 3)
-alert_subscriptions_db: List[dict] = []
-
 
 class AlertSubscriptionRequest(BaseModel):
     """Request model for alert subscription."""
@@ -64,7 +60,8 @@ async def subscribe_alert(
         raise HTTPException(status_code=404, detail="Hackathon not found")
     
     # Check if subscription already exists for this hackathon
-    for sub in alert_subscriptions_db:
+    alerts = get_alerts()
+    for sub in alerts:
         if sub.get("hackathon_id") == request.hackathon_id:
             raise HTTPException(
                 status_code=409, 
@@ -73,33 +70,29 @@ async def subscribe_alert(
     
     # Create subscription
     subscription = {
-        "id": f"alert_{len(alert_subscriptions_db) + 1}",
+        "id": f"alert_{len(alerts) + 1}",
         "hackathon_id": request.hackathon_id,
         "days_before": request.days_before,
         "channel": request.channel,
         "created_at": datetime.utcnow().isoformat() + "Z"
     }
     
-    alert_subscriptions_db.append(subscription)
-    
-    return subscription
+    return create_alert(subscription)
 
 
 @router.get("/alerts")
 async def list_alerts():
     """List all alert subscriptions."""
     return {
-        "total": len(alert_subscriptions_db),
-        "subscriptions": alert_subscriptions_db
+        "total": len(get_alerts()),
+        "subscriptions": get_alerts()
     }
 
 
 @router.delete("/alerts/{alert_id}")
 async def delete_alert(alert_id: str):
     """Delete an alert subscription by ID."""
-    global alert_subscriptions_db
-    for i, sub in enumerate(alert_subscriptions_db):
-        if sub.get("id") == alert_id:
-            deleted = alert_subscriptions_db.pop(i)
-            return {"message": "Alert subscription deleted", "deleted": deleted}
+    deleted = delete_alert_record(alert_id)
+    if deleted is not None:
+        return {"message": "Alert subscription deleted", "deleted": deleted}
     raise HTTPException(status_code=404, detail="Alert subscription not found")
