@@ -32,6 +32,7 @@ async def lifespan(app: FastAPI):
     from scrapers.hackerearth_client import fetch_hackerearth_challenges, normalize_hackerearth
     from scrapers.angelhack_client import fetch_angelhack_events, normalize_angelhack
     from scrapers.devnetwork_client import fetch_devnetwork_events, normalize_devnetwork
+    from scrapers.junction_client import fetch_junction_events, normalize_junction
     from scrapers.seed_loader import load_seed_companies
     
     # Fetch from all sources
@@ -67,12 +68,16 @@ async def lifespan(app: FastAPI):
     devnetwork_raw = fetch_devnetwork_events()
     devnetwork_events = normalize_devnetwork(devnetwork_raw)
     print(f"  DevNetwork: {len(devnetwork_events)} events")
+
+    junction_raw = fetch_junction_events()
+    junction_events = normalize_junction(junction_raw)
+    print(f"  Junction: {len(junction_events)} events")
     
     seed_events = load_seed_companies()
     print(f"  Seed companies: {len(seed_events)} events")
     
     # Combine all events
-    all_events = devpost_events + mlh_events + topcoder_events + kaggle_events + devfolio_events + hackerearth_events + angelhack_events + devnetwork_events + seed_events
+    all_events = devpost_events + mlh_events + topcoder_events + kaggle_events + devfolio_events + hackerearth_events + angelhack_events + devnetwork_events + junction_events + seed_events
     print(f"  Total before dedupe: {len(all_events)}")
     
     # Deduplicate

@@ -7,6 +7,7 @@ from .devfolio_client import fetch_devfolio_hackathons, normalize_devfolio
 from .hackerearth_client import fetch_hackerearth_challenges, normalize_hackerearth
 from .angelhack_client import fetch_angelhack_events, normalize_angelhack
 from .devnetwork_client import fetch_devnetwork_events, normalize_devnetwork
+from .junction_client import fetch_junction_events, normalize_junction
 from .seed_loader import load_seed_companies
 
 __all__ = [
@@ -26,5 +27,7 @@ __all__ = [
     "normalize_angelhack",
     "fetch_devnetwork_events",
     "normalize_devnetwork",
+    "fetch_junction_events",
+    "normalize_junction",
     "load_seed_companies",
 ]

@@ -19,6 +19,16 @@ from collections import defaultdict
 import statistics
 
 
+# MVP stopgap rates; replace with a dated FX service or configured rates later.
+FIXED_USD_RATES = {
+    'USD': 1.0,
+    'JPY': 0.0067,
+    'EUR': 1.08,
+    'GBP': 1.27,
+    'INR': 0.012,
+}
+
+
 class ImpactScorer:
     def __init__(self, config_path: str = "pipeline/scoring_config.yaml"):
         with open(config_path, 'r') as f:
@@ -127,12 +137,12 @@ class ImpactScorer:
         floor = self.config['prize_pool']['floor_usd']
         ceiling = self.config['prize_pool']['ceiling_usd']
         
-        # TODO: Handle currency conversion - for now assume USD or convert INR roughly
-        currency = prize_pool.get('currency', 'USD')
-        if currency == 'INR':
-            amount_usd = amount / 83  # Rough conversion
-        else:
-            amount_usd = amount
+        currency = str(prize_pool.get('currency', 'USD')).upper()
+        usd_rate = FIXED_USD_RATES.get(currency)
+        if usd_rate is None:
+            # Confirmed monetary value, but its scale cannot be compared safely.
+            return 0.3
+        amount_usd = amount * usd_rate
         
         if amount_usd <= floor:
             return 0.1
