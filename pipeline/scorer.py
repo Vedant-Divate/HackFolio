@@ -108,7 +108,7 @@ class ImpactScorer:
         - amount=0 with empty display_text (MLH) = no data, don't penalize, treat as unknown
         - Normalize monetary amounts against floor/ceiling
         """
-        prize_pool = event.get('prize_pool', {})
+        prize_pool = event.get('prize_pool') or {}
         amount = prize_pool.get('amount', 0)
         display_text = (prize_pool.get('display_text') or '').strip().lower()
         source = event.get('source_platform', '')

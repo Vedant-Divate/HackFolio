@@ -93,8 +93,9 @@ class HackathonDeduplicator:
         if event.get('domains'): score += 10
         if event.get('mode'): score += 5
         if event.get('location'): score += 5
-        if event.get('prize_pool', {}).get('amount', 0) > 0: score += 15
-        if event.get('prize_pool', {}).get('display_text'): score += 5
+        prize_pool = event.get('prize_pool') or {}
+        if prize_pool.get('amount', 0) > 0: score += 15
+        if prize_pool.get('display_text'): score += 5
         if event.get('sponsors'): score += 10
         if event.get('registration_deadline'): score += 5
         if event.get('event_start_date'): score += 5

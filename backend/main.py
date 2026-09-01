@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from backend.routes import hackathons
 from backend.routes import health
+from backend.routes import alerts
 from backend.db import set_hackathons_db, clear_hackathons_db
 
 
@@ -27,6 +28,10 @@ async def lifespan(app: FastAPI):
     from scrapers.mlh_client import fetch_mlh_events, normalize_mlh
     from scrapers.topcoder_client import fetch_topcoder_challenges, normalize_topcoder
     from scrapers.kaggle_client import fetch_kaggle_competitions, normalize_kaggle
+    from scrapers.devfolio_client import fetch_devfolio_hackathons, normalize_devfolio
+    from scrapers.hackerearth_client import fetch_hackerearth_challenges, normalize_hackerearth
+    from scrapers.angelhack_client import fetch_angelhack_events, normalize_angelhack
+    from scrapers.devnetwork_client import fetch_devnetwork_events, normalize_devnetwork
     from scrapers.seed_loader import load_seed_companies
     
     # Fetch from all sources
@@ -47,11 +52,27 @@ async def lifespan(app: FastAPI):
     kaggle_events = normalize_kaggle(kaggle_raw)
     print(f"  Kaggle: {len(kaggle_events)} events")
     
+    devfolio_raw = fetch_devfolio_hackathons()
+    devfolio_events = normalize_devfolio(devfolio_raw)
+    print(f"  Devfolio: {len(devfolio_events)} events")
+
+    hackerearth_raw = fetch_hackerearth_challenges()
+    hackerearth_events = normalize_hackerearth(hackerearth_raw)
+    print(f"  HackerEarth: {len(hackerearth_events)} events")
+
+    angelhack_raw = fetch_angelhack_events()
+    angelhack_events = normalize_angelhack(angelhack_raw)
+    print(f"  AngelHack: {len(angelhack_events)} events")
+
+    devnetwork_raw = fetch_devnetwork_events()
+    devnetwork_events = normalize_devnetwork(devnetwork_raw)
+    print(f"  DevNetwork: {len(devnetwork_events)} events")
+    
     seed_events = load_seed_companies()
     print(f"  Seed companies: {len(seed_events)} events")
     
     # Combine all events
-    all_events = devpost_events + mlh_events + topcoder_events + kaggle_events + seed_events
+    all_events = devpost_events + mlh_events + topcoder_events + kaggle_events + devfolio_events + hackerearth_events + angelhack_events + devnetwork_events + seed_events
     print(f"  Total before dedupe: {len(all_events)}")
     
     # Deduplicate
@@ -92,6 +113,7 @@ app.add_middleware(
 # Include routers
 app.include_router(health.router, tags=["health"])
 app.include_router(hackathons.router, prefix="/api", tags=["hackathons"])
+app.include_router(alerts.router, prefix="/api", tags=["alerts"])
 
 
 @app.get("/")
